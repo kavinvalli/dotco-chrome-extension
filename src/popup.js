@@ -107,7 +107,7 @@ function showSuccess(mainDomain, slug) {
   document.getElementById("success").classList.remove("hidden");
 }
 
-function showSuccess(error) {
+function showError(error) {
   document.getElementById("error-text").innerHTML = error;
   document.getElementById("error").classList.remove("hidden");
 }
