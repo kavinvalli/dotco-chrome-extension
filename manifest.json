@@ -1,0 +1,13 @@
+{
+  "name": "DotCo",
+  "description": "A URL shortener for the web",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": ["storage", "tabs"],
+  "action": {
+    "default_popup": "src/popup.html"
+  }
+}

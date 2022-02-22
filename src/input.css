@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-control {
+    @apply bg-slate-900 text-gray-300 rounded py-3 px-4 my-1 leading-tight focus:outline-none focus:ring-2 focus:ring-pink-500 w-full;
+  }
+
+  .btn {
+    @apply bg-slate-900 text-gray-300 rounded py-3 px-4 my-1 uppercase focus:outline-none focus:ring-2 focus:ring-pink-500;
+  }
+}
+
+.spinner-border {
+  vertical-align: -0.125em;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+}
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body
+    class="bg-slate-800 h-[350px] w-[500px] flex justify-center items-center"
+  >
+    <form id="setup" class="w-full p-6 flex flex-col justify-center hidden">
+      <input
+        type="password"
+        placeholder="AIRTABLE API KEY"
+        class="form-control"
+        id="DOTCO_AIRTABLE_API_KEY"
+        required
+      />
+      <input
+        type="text"
+        placeholder="AIRTABLE BASE ID"
+        class="form-control"
+        id="DOTCO_AIRTABLE_BASE_ID"
+        required
+      />
+      <input
+        type="text"
+        placeholder="AIRTABLE TABLE NAME"
+        class="form-control"
+        id="DOTCO_AIRTABLE_TABLE_NAME"
+        required
+      />
+      <input
+        type="text"
+        placeholder="MAIN DOMAIN"
+        class="form-control"
+        id="DOTCO_MAIN_DOMAIN"
+        required
+      />
+      <button class="btn" type="submit">Submit</button>
+    </form>
+    <form id="create" class="w-full p-6 flex flex-col justify-center">
+      <div
+        id="success"
+        class="p-4 mb-2 border-l-4 border-green-500 bg-green-300/30 text-green-500 text-xs hidden"
+      >
+        Successfully created
+        <span id="created-shortlink"></span>
+      </div>
+      <div
+        id="error"
+        class="p-4 mb-2 border-l-4 border-red-500 bg-red-300/30 text-red-500 text-xs hidden"
+      >
+        Something went wrong:
+        <span id="error-text"></span>
+      </div>
+      <input
+        type="text"
+        placeholder="slug"
+        class="form-control"
+        id="slug"
+        required
+      />
+      <div class="flex">
+        <input
+          type="text"
+          placeholder="https://target.com"
+          class="form-control mr-1"
+          id="url"
+          required
+        />
+        <button id="use-current-url" class="btn ml-1">
+          Use Current Tab URL
+        </button>
+      </div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+    <div
+      class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full text-pink-500 hidden"
+      role="status"
+      id="loader"
+    >
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <footer
+      class="fixed bottom-0 w-full bg-slate-900 text-gray-400 text-xs font-semibold text-center py-2"
+    >
+      &#169; <span id="year"></span> -
+      <a
+        href="https://github.com/someshkar/dotco"
+        class="hover:font-bold hover:text-white"
+        target="_blank"
+        >dotco</a
+      >
+      -
+      <a
+        href="https://github.com/kavinvalli/dotco-chrome-extension"
+        class="hover:font-bold hover:text-white"
+        target="_blank"
+        >Github</a
+      >
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
